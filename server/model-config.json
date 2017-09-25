@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "course": {
+    "dataSource": "courses",
+    "public": true
+  },
+  "registration": {
+    "dataSource": "courses",
+    "public": true
+  },
+  "instructor": {
+    "dataSource": "courses",
+    "public": true
+  },
+  "courserating": {
+    "dataSource": "courses",
+    "public": true
+  },
+  "administrator": {
+    "dataSource": "courses",
+    "public": false
+  },
+  "Student": {
+    "dataSource": "courses",
+    "public": true
+  },
+  "container": {
+    "dataSource": "filestore-mongo",
+    "public": true
+  }
+}

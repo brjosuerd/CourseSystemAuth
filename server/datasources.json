@@ -1,0 +1,20 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "courses": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "dbtraking",
+    "password": "",
+    "name": "courses",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "filestore-mongo": {
+    "name": "filestore-mongo",
+    "provider": "filestore-mongo",
+    "connector": "loopback-component-storage-mongo"
+  }
+}

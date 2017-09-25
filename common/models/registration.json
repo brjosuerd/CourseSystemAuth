@@ -1,0 +1,43 @@
+{
+  "name": "registration",
+  "plural": "registrations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "student": {
+      "type": "string"
+    },
+    "course": {
+      "type": "string"
+    },
+    "semester": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Student": {
+      "type": "belongsTo",
+      "model": "Student",
+      "foreignKey": ""
+    },
+    "Course": {
+      "type": "hasOne",
+      "model": "course",
+      "foreignKey": "registrationId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "register"
+    }
+  ],
+  "methods": {}
+}

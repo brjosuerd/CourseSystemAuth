@@ -1,0 +1,28 @@
+{
+  "name": "courserating",
+  "plural": "courseratings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "course": {
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Course": {
+      "type": "belongsTo",
+      "model": "course",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
